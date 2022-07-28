@@ -1,0 +1,34 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+---
+spring:
+  profiles:
+    active: test_1
+  kafka:
+    streams:
+      state-dir: C:/kafka/test_1
+
+server:
+  port: 8080
+---
+
+spring:
+  profiles:
+    active: test_2
+  kafka:
+    streams:
+      state-dir: C:/kafka/test_2
+server:
+  port: 8081
+
+---
+
+spring:
+  profiles:
+    active: test
+  kafka:
+    streams:
+      state-dir: C:/kafka/test
+server:
+  port: 8082
